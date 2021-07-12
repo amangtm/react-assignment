@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Rubrik;
+  src: url(https://fonts.google.com/specimen/Rubik?query=Rubik#standard-styles);
+}
+body{
+  /*  Change 16px for detail page */
+  font-size: 14px; 
+  font-family:Rubrik;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  height: 13vh;
+  align-items: center;
+  box-shadow: 2px 1px  1px #888888;
+} 
+
+.header h2{
+  width: 20vw;
+  margin-left: 5vw; 
+}
+.toggleTheme{
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  margin-right:5vw ;
+  font-weight: 600;
+}
+.toggleTheme img{
+  width: 15px;
+  margin-right: 7px;
+}
+.search-filter-wrapper{
+  margin:50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+}
+.search{
+  /* box-shadow: 1px 3px  2px #888888; */
+  border-style: none;
+}
+input[type=text]{
+  background-image: url("./assets/search-icon.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  height: 45px;
+  width: 400px;
+  background-position: 20px 13px;
+  text-indent: 60px; 
+}
+.filter{
+  
+
+}
+.filter select{
+  height: 45px;
+  width:200px;
+}
+
+.card-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.card{
+  width: 250px;
+  height:330px;
+  box-shadow: 2px 5px  4px #888888;
+  margin-top: 30px;
+  justify-self:left;
+
+}
+.card img{
+  width: 250px;
+  height: 170px;
+}
+.card h2{
+  margin-left: 20px;
+}
+.country-details{
+  font-weight: 600;
+  margin-left: 20px;
+}
+.country-details span{
+  font-weight: normal;
+}
