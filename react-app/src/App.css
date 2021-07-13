@@ -1,11 +1,8 @@
-@font-face {
-  font-family: Rubrik;
-  src: url(https://fonts.google.com/specimen/Rubik?query=Rubik#standard-styles);
-}
+@import url(https://fonts.google.com/specimen/Rubik?query=Rubik#standard-styles);
 body{
   /*  Change 16px for detail page */
   font-size: 14px; 
-  font-family:Rubrik;
+  font-family:Rubik;
 }
 .header{
   display: flex;
@@ -51,28 +48,33 @@ input[type=text]{
   background-position: 20px 13px;
   text-indent: 60px; 
 }
-.filter{
+/* .filter{
   
 
-}
+} */
 .filter select{
   height: 45px;
   width:200px;
+  padding: 10px;
 }
+/* .filter select option{
+ 
+} */
 
 .card-list{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 
 }
 .card{
   width: 250px;
   height:330px;
-  box-shadow: 2px 5px  4px #888888;
-  margin-top: 30px;
-  justify-self:left;
+  box-shadow: 1px 4px 3px #888888;
+  /* margin-top: 30px; */
+  margin: 20px 50px;
+  /* flex: 1; */
 
 }
 .card img{
@@ -88,4 +90,90 @@ input[type=text]{
 }
 .country-details span{
   font-weight: normal;
+}
+.back-button{
+  margin: 10vh 5vw;
+}
+.back-button button{
+  background: none;
+  border-style: none;
+  box-shadow: 2px 4px 3px 2px #888888;
+  width:120px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.back-button button span{
+  text-align: center;
+}
+.back-button button img{
+  width:50px;
+  height: 17px;
+  
+}
+.card-detail-wrapper{
+  display: flex;
+  flex-direction: row;
+  
+  /* background-color: lightgoldenrodyellow; */
+  margin:0 5vw;
+}
+.card-detail-wrapper img{
+  width: 450px;
+  height: 350px;
+}
+.detail-wrapper{
+  margin-left:8vw;
+}
+.detail-col{
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+}
+.detail-col1{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  /* align-items: center; */
+}
+.detail-col2{
+    
+}
+.detail-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+}
+.detail-row span{
+  margin: 2px;
+}
+.detail-sub-heading{
+  margin-right: 5px;
+}
+
+
+.detail-clickable-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+.border-country-list{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.border-country-list button{
+  background: none;
+  border-style: none;
+  box-shadow: 2px 3px 5px #888888;
+  margin:10px;
+  height: 25px;
+  width: 80px;
 }
