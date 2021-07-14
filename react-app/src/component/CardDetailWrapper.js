@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import StaticFlag from '../assets/india-flag.jpeg'
-class CardDetailWrapper extends Component {
-    render(props) {
-        const {flagUrl,countryName,nativeName,population,region,subRegion,capital,topLevelDomain,currencies,languages,borderCountries}=this.props;
+function CardDetailWrapper(props){
+        console.log(props)
+        const {flagUrl,countryName,nativeName,population,region,subRegion,capital,topLevelDomain,currencies,languages,borderCountries}=props;
         return (
             <div className="card-detail-wrapper">
-                <img src={StaticFlag}/>
+                <img src={flagUrl}/>
                 <div className="detail-wrapper">
                     <h1>{countryName}</h1>
                     <div className="detail-col">
@@ -37,18 +37,20 @@ class CardDetailWrapper extends Component {
                         <div className="detail-col2">
                         <div className="detail-row">
                             <h4 className="detail-sub-heading">Top Level Domain:</h4>
-                            <span>{topLevelDomain}</span>
+                            {topLevelDomain.map(domain=> {
+                                return <span>{domain}</span>
+                            })} 
                         </div>
                         <div className="detail-row">
                             <h4 className="detail-sub-heading">Currencies:</h4>
                             {currencies.map(currency=> {
-                                return <span>{currency}</span>
+                                return <span>{currency.name}</span>
                             })}  
                         </div>
                         <div className="detail-row">
                             <h4 className="detail-sub-heading">Languages:</h4>
                             {languages.map(lang=> {
-                                return <span>{lang}</span>
+                                return <span>{lang.name}</span>
                             })} 
                         </div>
                         
@@ -74,7 +76,7 @@ class CardDetailWrapper extends Component {
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default CardDetailWrapper
