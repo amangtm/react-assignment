@@ -2,3 +2,4 @@
 *.zip
 *.DS_Store
 */design-info
+*/node_modules

@@ -6,7 +6,7 @@ class Card extends Component {
         const {flagUrl,countryName,population,region,capital}=this.props;
         return (
             
-            <div className="card">
+            <div className="card" onClick={()=>console.log(`${countryName} clicked`)}>
                 <img src={flagUrl}/>
                 <h2>{countryName}</h2>
                 <div className="country-details">Population: <span>{population}</span></div>
