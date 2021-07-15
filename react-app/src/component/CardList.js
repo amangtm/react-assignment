@@ -7,6 +7,7 @@ import { StateContext } from './Store'
 function CardList() {
     const [state,dispatch]=useContext(StateContext)
     let listData=[];
+    console.log(state);
     useEffect(() => {
         axios.get('https://restcountries.eu/rest/v2/all')
         .then(response =>{
@@ -19,14 +20,15 @@ function CardList() {
         })        
     }, [])
     
-    let Cards=<h2>Loading....</h2>
-    if(state.countryList==undefined){
-        Cards=<h2>Somethign went Wrong: <span>{state.error}</span> </h2>
-        return Cards
-    }
+    // let Cards=<h2>Loading....</h2>
+    // if(state.countryList==undefined){
+    //     Cards=<h2>Somethign went Wrong: <span>{state.error}</span> </h2>
+    //     return Cards
+    // }
+    
     return (
         <div className="card-list">
-                {state.countryList.map((data,index) => {
+                {(state.countryList).map((data,index) => {
                     return <Card key={index} countryName={data.name} flagUrl={data.flag} population={data.population} region={data.region} capital={data.capital}/>
                      })
                 }

@@ -10,7 +10,7 @@ function DetailPage(){
         // console.log(state.countryName)
         const detail=state.countryList.filter(data => (data.name==countryName))
         console.log(detail)
-        const {flag,name,nativeName,population,region,subregion,capital,topLevelDomain,currencies,languages,borders}=detail[0]
+        const {flag,name,nativeName,population,region,subregion,capital,topLevelDomain=[],currencies=[],languages=[],borders=[]}=(detail[0] || {})
        
         // console.log(borders);
         // const borderCountryObject = state.countryList.filter( (data) =>{

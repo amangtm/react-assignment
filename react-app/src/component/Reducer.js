@@ -3,18 +3,21 @@ const Reducer= (state,action)=>{
         case 'GET_COUNTRY':
             // console.log('Get country action called')
             return {
+                ...state,
                 countryList: action.payload,
-                error: null  
-
             }
         
         case 'SET_ERROR':
             // console.log('Error action called')
             return {
-                countryList: [],
+                ...state,
                 error: action.payload
             }
-           
+        case 'SET_THEME':
+            return {
+                ...state,
+                theme: action.payload
+            }  
         default:
             return state; 
         
