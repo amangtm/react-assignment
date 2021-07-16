@@ -1,13 +1,17 @@
-import React from 'react';
-import DarkModeButton from './DarkModeButton';
+import React, { useContext } from 'react'
+import DarkModeButton from './DarkModeButton'
+import { StateContext } from './Store'
 
-class Header extends React.Component{
-    render(){
-        return <div className="header">
-                    <h2 >Where in the World?</h2>
-                    <DarkModeButton />        
-                </div>
+function Header() {
+    const [state, dispatch] = useContext(StateContext)
+    const HeaderStyle = {
+        backgroundColor: state.theme.element
     }
+    return <div className="header" style={HeaderStyle}>
+        <h2 >Where in the World?</h2>
+        <DarkModeButton />
+    </div>
+
 }
 
-export default Header;
+export default Header

@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
-import Store from './component/Store';
-import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
-
-
+import Store, { StateContext } from './component/Store';
+import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 
 
 function App() {
+  const [state,dispatch]= useContext(StateContext);
+  const AppStyle={
+    backgroundColor:state.theme.background,
+    color:state.theme.text
+  }
   return (
-    <div className="App">
-      
-      <Store>
+    <div className="App" style={AppStyle}>
         <Router>
           <Switch>
             <Route exact path="/">
@@ -22,9 +23,7 @@ function App() {
                 <DetailPage/>
             </Route>
           </Switch>
-        </Router>
-      </Store>
-       
+        </Router>       
     </div>
   );
 }

@@ -5,6 +5,10 @@ import axios from 'axios'
 function Filter() {
     const [regionValue, setRegionValue]=useState("")
     const [state,dispatch]=useContext(StateContext)
+    const FilterStyle={
+        backgroundColor: state.theme.element,
+        color: state.theme.text
+    }
     useEffect(() => {
         axios.get(`https://restcountries.eu/rest/v2/region/${regionValue}`)
         .then(response =>{
@@ -17,11 +21,11 @@ function Filter() {
     },[regionValue] )
     // console.log(regionValue);
         return (
-            <div className="filter">
-                <select onChange={(event) => setRegionValue(event.target.value)} class="filter-select" >
+            <div className="filter" >
+                <select onChange={(event) => setRegionValue(event.target.value)} class="filter-select" style={FilterStyle}>
                     <option selected disabled>Filter by Region</option>
                     <option value="africa">Africa</option>
-                    <option value="america">America</option>
+                    <option value="americas">America</option>
                     <option value="asia">Asia</option>
                     <option value="europe">Europe</option>
                     <option value="oceania">Oceania</option>

@@ -6,13 +6,10 @@ import { StateContext } from './Store'
 
 function CardList() {
     const [state,dispatch]=useContext(StateContext)
-    let listData=[];
-    console.log(state);
     useEffect(() => {
         axios.get('https://restcountries.eu/rest/v2/all')
         .then(response =>{
             dispatch({type: 'GET_COUNTRY',payload:response.data})
-            listData=response.data;
             // console.log(state.countryList)
         })
         .catch(err =>{

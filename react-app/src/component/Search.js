@@ -4,6 +4,11 @@ import axios from 'axios';
 function Search() {
     const [inputText,setInputText]=useState("")
     const [state, dispatch] = useContext(StateContext);
+    const SearchStyle={
+        backgroundColor: state.theme.element,
+        color: state.theme.text
+
+    }
     useEffect(() => {
         
         axios.get(`https://restcountries.eu/rest/v2/name/${inputText}`)
@@ -19,7 +24,7 @@ function Search() {
     
     return (
             <div className="search">
-                <input type="text" onChange={(event) => setInputText(event.target.value)} value={inputText} name="countries" id="countries" placeholder="Search of a Country...."/>
+                <input type="text" onChange={(event) => setInputText(event.target.value)} value={inputText} name="countries" id="countries" placeholder="Search of a Country...." style={SearchStyle} />
             </div>  
     )
 }

@@ -48,7 +48,7 @@ body{
   width: 480px;
   margin-left: 5vw; 
 }
-.toggleTheme{
+.theme-button{
   justify-content: flex-end;
   display: flex;
   flex-direction: row;
@@ -56,7 +56,11 @@ body{
   margin-right:5vw ;
   font-weight: 600;
 }
-.toggleTheme img{
+.theme-button a{
+  text-decoration: none;
+  color:inherit;
+}
+.theme-button img{
   width: 15px;
   margin-right: 7px;
 }
@@ -80,6 +84,9 @@ body{
     width: 90vw;
     background-position: 20px 13px;
     text-indent: 60px; 
+  }
+  input[type=text]::placeholder{
+    color:inherit;
   }
   .filter{
     /* margin-top: 20px; */
@@ -199,7 +206,7 @@ body{
   .filter select{
     height: 45px;
     width:200px;
-    padding: 10px;
+    /* padding-right: 10px; */
     
   }
   .filter select option{
@@ -302,10 +309,12 @@ body{
 }
 .card h2{
   margin-left: 20px;
+ 
 }
 .country-details{
   font-weight: 600;
   margin-left: 20px;
+
 }
 .country-details span{
   font-weight: normal;
