@@ -1,15 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect } from 'react'
 import Header from '../component/Header'
 import BackButton from '../component/BackButton'
 import CardDetailWrapper from '../component/CardDetailWrapper'
 import {useParams} from 'react-router-dom'
 import { StateContext } from '../component/Store'
+import axios from 'axios'
 function DetailPage(){
         const {countryName}=useParams();
         const [state,dispatch]=useContext(StateContext);
-        // console.log(state.countryName)
+        useEffect(() => {
+            axios.get('https://restcountries.eu/rest/v2/all')
+            .then(response =>{
+                dispatch({type: 'GET_COUNTRY',payload:response.data})
+            })
+            .catch(err =>{
+                dispatch({type:'SET_ERROR', payload:err})
+            })        
+        }, [])
         const detail=state.countryList.filter(data => (data.name==countryName))
-        console.log(detail)
+        // console.log(detail)
         const {flag,name,nativeName,population,region,subregion,capital,topLevelDomain=[],currencies=[],languages=[],borders=[]}=(detail[0] || {})
        
         // console.log(borders);
