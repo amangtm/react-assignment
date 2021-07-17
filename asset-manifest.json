@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-assignment/static/css/main.a102e2df.chunk.css",
+    "main.js": "/react-assignment/static/js/main.8bc4e88a.chunk.js",
+    "main.js.map": "/react-assignment/static/js/main.8bc4e88a.chunk.js.map",
+    "runtime-main.js": "/react-assignment/static/js/runtime-main.842ea140.js",
+    "runtime-main.js.map": "/react-assignment/static/js/runtime-main.842ea140.js.map",
+    "static/js/2.3af90805.chunk.js": "/react-assignment/static/js/2.3af90805.chunk.js",
+    "static/js/2.3af90805.chunk.js.map": "/react-assignment/static/js/2.3af90805.chunk.js.map",
+    "static/js/3.08ac5f39.chunk.js": "/react-assignment/static/js/3.08ac5f39.chunk.js",
+    "static/js/3.08ac5f39.chunk.js.map": "/react-assignment/static/js/3.08ac5f39.chunk.js.map",
+    "index.html": "/react-assignment/index.html",
+    "static/css/main.a102e2df.chunk.css.map": "/react-assignment/static/css/main.a102e2df.chunk.css.map",
+    "static/js/2.3af90805.chunk.js.LICENSE.txt": "/react-assignment/static/js/2.3af90805.chunk.js.LICENSE.txt",
+    "static/media/half-moon.a0938820.png": "/react-assignment/static/media/half-moon.a0938820.png",
+    "static/media/india-flag.14b36059.jpeg": "/react-assignment/static/media/india-flag.14b36059.jpeg",
+    "static/media/left-arrow-back-button.8f09595c.svg": "/react-assignment/static/media/left-arrow-back-button.8f09595c.svg",
+    "static/media/App.css": "/react-assignment/static/media/search-icon.1d92f967.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.842ea140.js",
+    "static/js/2.3af90805.chunk.js",
+    "static/css/main.a102e2df.chunk.css",
+    "static/js/main.8bc4e88a.chunk.js"
+  ]
+}
